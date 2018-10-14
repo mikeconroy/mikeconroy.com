@@ -11,4 +11,4 @@ This is my first post being sent out onto the new Jekyll platform blog.
 
 This blog can be found [here][mikepconroy.com]
 
-[mikepconroy.com]: mikepconroy.com
+[mikepconroy.com]: https://mikepconroy.com

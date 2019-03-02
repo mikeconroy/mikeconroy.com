@@ -6,3 +6,8 @@ iframe {
 .image {
    text-align: center;
 }
+
+.centre-image{
+   margin: 0 auto;
+   display: block;
+}

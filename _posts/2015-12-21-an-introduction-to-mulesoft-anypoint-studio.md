@@ -24,7 +24,7 @@ Anypoint studio is a tool for building integrations & APIs for systems. It is ba
 
 * * *
 &nbsp;
-{% include image.html url="/assets/images/MuleSoft/screenshot.png" description="MuleSoft Anypoint Studio - Salesforce Flor" %}
+{% include image.html url="/assets/images/MuleSoft/screenshot.png" description="MuleSoft Anypoint Studio - Salesforce Flow" %}
 
 The flow that we will create will return data from Salesforce (Accounts in our example) to the browser in JSON when visiting http://localhost:8081/salesforce.demo
 

@@ -16,9 +16,8 @@ tags:
   - Education
   - Mobile
 ---
-<center>
-  <a href="https://www.appsforgood.org/"><img src="https://mikepconroy.com/wp-content/uploads/2015/10/AppsForGood.jpg" alt="" width="259" height="65" /></a>
-</center>&nbsp;
+
+[![Apps For Good Logo](/assets/images/AppsForGood/logo.jpg){: .centre-image}](https://www.appsforgood.org/)
 
 Today I spent my time reviewing and discussing mobile application ideas from 1000&#8217;s of school children, from 213 schools (and counting!) across the country. The scheme is called **<a href="http://www.appsforgood.org/public/get-involved" target="_blank">Apps for Good</a>** and is run with the intention of teaching 10-18 year olds problem solving, basic programming, and creativity among other skills through technology.
 

@@ -14,11 +14,8 @@ tags:
   - Java
   - programming
 ---
-<center>
-  <a href="http://checkstyle.sourceforge.net/"><img class="alignnone size-full wp-image-273" src="https://mikepconroy.com/wp-content/uploads/2017/03/checkstyle_logo.png" alt="" width="261" height="98" /></a>
-</center>
 
-
+[![Checkstyle Logo](/assets/images/Checkstyle/logo.png){: .centre-image}](http://checkstyle.sourceforge.net/)
   
 Checkstyle is a tool that can be used by developers in order to help teams follow coding conventions on a Java project. I recently used this whilst developing a <a href="https://github.com/mikecon94/Battleships" target="_blank">Battleships</a> game in Java with a group of others as part of a university module (maybe a post for another day?..).
 

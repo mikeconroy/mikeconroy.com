@@ -15,7 +15,7 @@ tags:
   - programming
   - statistics
 ---
-This part of the post is about explaining the problem itself and why the answer is what it is, whilst the second part is about computing the answer and &#8220;proving&#8221; it. Therefore, if you are already familiar with the problem skip to [part 2](http://mikepconroy.com/?p=97 "part 2") of the post.
+This part of the post is about explaining the problem itself and why the answer is what it is, whilst the second part is about computing the answer and &#8220;proving&#8221; it. Therefore, if you are already familiar with the problem skip to [Part 2]({{ site.baseurl }}{% link _posts/2013-06-16-the-monty-hall-problem-part-2.md %}) of the post.
 
 Since reading about the problem in a <a title="book" href="http://en.wikipedia.org/wiki/The_Curious_Incident_of_the_Dog_in_the_Night-Time" target="_blank">book</a> when I was young, the monty hall problem, has always been something I have found interesting, and found myself on the <a title="Wikipedia page" href="http://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank">Wikipedia page</a> for it multiple times (including when it was used in one of Derren Browns shows, and in the movie <a title="21" href="http://en.wikipedia.org/wiki/21_(2008_film)" target="_blank">21</a>). So I decided to write a program that demonstrates it and write a blog post about it.
 
@@ -47,6 +47,6 @@ The <a title="Wikipedia page" href="http://en.wikipedia.org/wiki/Monty_Hall_prob
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mhlc7peGlGg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The second part of this post can be found [here](http://mikepconroy.com/?p=97 "here.") where I discuss the program I created based on the problem and the results it produces.
+The second part of this post can be found [here]({{ site.baseurl }}{% link _posts/2013-06-16-the-monty-hall-problem-part-2.md %}) where I discuss the program I created based on the problem and the results it produces.
 
 &nbsp;

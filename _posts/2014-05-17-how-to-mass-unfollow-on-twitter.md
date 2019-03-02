@@ -24,10 +24,12 @@ Yesterday, I wanted to unfollow everyone on an old account on Twitter. When sear
 
 4) Copy & Paste the following Javascript and hit enter:
 
-<pre class="default prettyprint prettyprinted" style="color: #000000;"><code>&lt;span class="kwd" style="color: #00008b;">var el&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln"> document&lt;/span>&lt;span class="pun">.&lt;/span>&lt;span class="pln">getElementsByClassName&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="str" style="color: #800000;">'&lt;span style="color: #222222;">button-text unfollow-text&lt;/span>'&lt;/span>&lt;span class="pun">);
-&lt;/span>&lt;span class="kwd" style="color: #00008b;">for&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="kwd" style="color: #00008b;">var&lt;/span>&lt;span class="pln"> i&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="lit" style="color: #800000;">0&lt;/span>&lt;span class="pun">; &lt;/span>&lt;span class="pln">i&lt;/span>&lt;span class="pun">&lt;&lt;/span>&lt;span class="pln">el&lt;/span>&lt;span class="pun">.&lt;/span>&lt;span class="pln">length&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln"> i&lt;/span>&lt;span class="pun">++)&lt;/span>&lt;span class="pun">{&lt;/span>&lt;span class="pln">
-    el&lt;/span>&lt;span class="pun">[&lt;/span>&lt;span class="pln">i&lt;/span>&lt;span class="pun">].&lt;/span>&lt;span class="pln">click&lt;/span>&lt;span class="pun">();
-&lt;/span>&lt;span class="pun">}&lt;/span></code></pre>
+{% highlight javascript %}
+var el= document.getElementsByClassName('button-text unfollow-text');
+for(var i=0; i<el.length; i++){
+    el[i].click();
+}
+{% endhighlight %}
 
 5) Wait a second or two depending on how many users you are following.
 

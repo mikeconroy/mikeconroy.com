@@ -21,8 +21,6 @@ When I left University I knew I wanted to get a job in IT since it is what my pa
 
 I feel like the following speech by Steve Jobs sums it up the best.
 
-<div class="jetpack-video-wrapper">
-  <span class="embed-youtube" style="text-align:center; display: block;"></span>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UF8uR6Z6KLc" frameborder="0" allow="acceleromete
+r; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-&nbsp;

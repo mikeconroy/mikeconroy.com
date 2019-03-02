@@ -22,9 +22,9 @@ Anypoint studio is a tool for building integrations & APIs for systems. It is ba
   <strong>Creating a basic app &#8211; Salesforce to HTTP</strong>
 </p>
 
-* * *<figure id="attachment_240" style="width: 339px" class="wp-caption aligncenter">
-
-[<img class="wp-image-240 " src="https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003-300x163.png" alt="" width="339" height="184" srcset="https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003-300x163.png 300w, https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003-768x418.png 768w, https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003-1024x558.png 1024w, https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003-624x340.png 624w, https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003.png 1366w" sizes="(max-width: 339px) 100vw, 339px" />](https://mikepconroy.com/wp-content/uploads/2015/11/Mule-Design-helloworld-src-main-app-helloworld.xml-Anypoint-Studio-_003.png)<figcaption class="wp-caption-text">Mule Anypoint &#8211; Salesforce Flow</figcaption></figure> 
+* * *
+&nbsp;
+{% include image.html url="/assets/images/MuleSoft/screenshot.png" description="MuleSoft Anypoint Studio - Salesforce Flor" %}
 
 The flow that we will create will return data from Salesforce (Accounts in our example) to the browser in JSON when visiting http://localhost:8081/salesforce.demo
 
@@ -36,5 +36,3 @@ The flow that we will create will return data from Salesforce (Accounts in our e
   6. In the logger configuration simply enter #[&#8216;Sending to browser&#8217;] in the Message field.
 
 Finally run the application by right-clicking the project in the left hand side browser -> Run-As -> Mule Application. When you see the word DEPLOYED in your console that means your application should now be running and if you visit http://localhost:8081/salesforcedemo you should retrieve a JSON view of all the accounts in your Salesforce environment.
-
-&nbsp;

@@ -57,6 +57,6 @@ Unfortunately, the person at Orange I was speaking to couldn&#8217;t help me. So
 
 I&#8217;m going to try again in a few days and hope that the situation at the moment is just due to the transfer being recent and Orange hasn&#8217;t been updated that the number is no longer on their network!
 
-**Update (28/03/2013):
+**Update (28/03/2013):**
   
-Turns out after transferring the number over to T-Mobile in the first place, although it had transferred, it takes a while for it to be processed on Oranges&#8217; end that the number is no longer &#8220;with them&#8221;. So I have now been able to transfer it back to Orange on the contract I want!**
+**Turns out after transferring the number over to T-Mobile in the first place, although it had transferred, it takes a while for it to be processed on Oranges&#8217; end that the number is no longer &#8220;with them&#8221;. So I have now been able to transfer it back to Orange on the contract I want!**

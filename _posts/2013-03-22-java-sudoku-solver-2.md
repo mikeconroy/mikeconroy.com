@@ -37,7 +37,7 @@ Where the 0s are the blanks in the given puzzle. The program will then print the
   
 When input the puzzle above:
 
-<img class="aligncenter size-full wp-image-138" alt="Sudoku Solver" src="//mikepconroy.com/wp-content/uploads/2013/03/example.png" width="676" height="344" srcset="https://mikepconroy.com/wp-content/uploads/2013/03/example.png 676w, https://mikepconroy.com/wp-content/uploads/2013/03/example-300x152.png 300w, https://mikepconroy.com/wp-content/uploads/2013/03/example-624x317.png 624w" sizes="(max-width: 676px) 100vw, 676px" />
+![Example Output](/assets/images/sudoku/example.png){:data-action="zoom"}
 
 Here is the source code:
 

@@ -45,9 +45,7 @@ If I pick a goat on my first choice (which is more likely), the host will then s
 
 The <a title="Wikipedia page" href="http://en.wikipedia.org/wiki/Monty_Hall_problem#.27The_Economist.27" target="_blank">wikipedia</a> page does a nice job of explaining why the odds change, or if you prefer here is a youtube video which explains why (Skip to 2m 40s for the explanation of why):
 
-<div class="jetpack-video-wrapper">
-  <span class="embed-youtube" style="text-align:center; display: block;"></span>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mhlc7peGlGg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The second part of this post can be found [here](http://mikepconroy.com/?p=97 "here.") where I discuss the program I created based on the problem and the results it produces.
 

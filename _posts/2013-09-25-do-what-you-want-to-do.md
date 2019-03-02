@@ -2,7 +2,7 @@
 id: 148
 title: Do what you want to do.
 date: 2013-09-25T16:18:21+00:00
-author: mikescom
+author: Mike Conroy
 layout: post
 guid: http://mikepconroy.com/?p=148
 permalink: /2013/09/do-what-you-want-to-do/

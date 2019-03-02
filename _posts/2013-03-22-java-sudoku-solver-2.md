@@ -2,7 +2,7 @@
 id: 49
 title: Java Sudoku Solver
 date: 2013-03-22T17:12:12+00:00
-author: mikescom
+author: Mike Conroy
 layout: post
 guid: http://mikepconroy.com/?p=49
 permalink: /2013/03/java-sudoku-solver-2/

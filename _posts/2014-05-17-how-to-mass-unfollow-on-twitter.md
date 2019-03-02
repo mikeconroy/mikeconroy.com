@@ -2,7 +2,7 @@
 id: 176
 title: How to mass unfollow on Twitter!
 date: 2014-05-17T18:32:27+00:00
-author: mikescom
+author: Mike Conroy
 layout: post
 guid: http://mikepconroy.com/?p=176
 permalink: /2014/05/how-to-mass-unfollow-on-twitter/

@@ -44,35 +44,36 @@ Installing and getting Checkstyle to work with Maven initially took a few attemp
 
 In the pom.xml put the following block of code into the <plugins> section.
 
-<pre class="brush: xml; title: ; notranslate" title="">&lt;plugin&gt;
-	&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-	&lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
-	&lt;version&gt;2.17&lt;/version&gt;
-	&lt;executions&gt;
-		&lt;execution&gt;
-			&lt;id&gt;validate&lt;/id&gt;
-			&lt;phase&gt;validate&lt;/phase&gt;
-			&lt;configuration&gt;
-				&lt;encoding&gt;UTF-8&lt;/encoding&gt;
-				&lt;configLocation&gt;checkstyle.xml&lt;/configLocation&gt;
-				&lt;consoleOutput&gt;true&lt;/consoleOutput&gt;
-				&lt;failsOnError&gt;true&lt;/failsOnError&gt;
-				&lt;linkXRef&gt;false&lt;/linkXRef&gt;
-			&lt;/configuration&gt;
-			&lt;goals&gt;
-				&lt;goal&gt;check&lt;/goal&gt;
-			&lt;/goals&gt;
-		&lt;/execution&gt;
-	&lt;/executions&gt;
-	&lt;dependencies&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;com.puppycrawl.tools&lt;/groupId&gt;
-			&lt;artifactId&gt;checkstyle&lt;/artifactId&gt;
-			&lt;version&gt;7.6&lt;/version&gt;
-		&lt;/dependency&gt;
-	&lt;/dependencies&gt;
-&lt;/plugin&gt;
-</pre>
+{% highlight xml %}
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-checkstyle-plugin</artifactId>
+	<version>2.17</version>
+	<executions>
+		<execution>
+			<id>validate</id>
+			<phase>validate</phase>
+			<configuration>
+				<encoding>UTF-8</encoding>
+				<configLocation>checkstyle.xml</configLocation>
+				<consoleOutput>true</consoleOutput>
+				<failsOnError>true</failsOnError>
+				<linkXRef>false</linkXRef>
+			</configuration>
+			<goals>
+				<goal>check</goal>
+			</goals>
+		</execution>
+	</executions>
+	<dependencies>
+		<dependency>
+			<groupId>com.puppycrawl.tools</groupId>
+			<artifactId>checkstyle</artifactId>
+			<version>7.6</version>
+		</dependency>
+	</dependencies>
+</plugin>
+{% endhighlight %}
 
 Note &#8211; the configLocation field can be removed and Checkstyle will use the default config (<a href="http://maven.apache.org/plugins-archives/maven-checkstyle-plugin-2.14/config/sun_checks.html" target="_blank">sun_checks.xml</a>) but as mentioned earlier on our project we used a custom configuration and simply named it &#8220;checkstyle.xml&#8221; in the root of our project.
   
@@ -92,7 +93,7 @@ That&#8217;s it, your project is now set up to run Checkstyle with Maven!
 
 There is also an [Eclipse Checkstyle Plugin](http://eclipse-cs.sourceforge.net) available for Checkstyle which will allow Eclipse to display errors and warnings to the user in the &#8216;problems&#8217; tab. This makes it easy for developers to see jump to the offending pieces of code and fix it to comply with the coding standards in the configuration file.<figure id="attachment_297" style="width: 625px" class="wp-caption aligncenter">
 
-[<img src="https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle-1024x696.png" alt="Checkstyle throwing a variety of errors in Eclipse." width="625" height="425" class="size-large wp-image-297" srcset="https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle-1024x696.png 1024w, https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle-300x204.png 300w, https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle-768x522.png 768w, https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle-624x424.png 624w, https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle.png 1291w" sizes="(max-width: 625px) 100vw, 625px" />](https://mikepconroy.com/wp-content/uploads/2017/03/eclipse_checkstyle.png)<figcaption class="wp-caption-text">Checkstyle throwing a variety of errors in Eclipse.</figcaption></figure> 
+{% include image.html url="/assets/images/Checkstyle/eclipseerrors.png" description="Checkstyle throwing a variety of errors in Eclipse." %}
 
 Happy Coding!
 

@@ -17,7 +17,7 @@ tags:
 ---
 If you are unfamiliar with The Monty Hall Problem please read the first part of this blog post [here.]({{ site.baseurl }}{% link _posts/2013-06-16-the-monty-hall-problem-part-1.md %})
 
-![Overview](/assets/images/MontyHall/overview.png){:data-action="zoom"}
+![Overview](/assets/images/MontyHall/overview.png){:data-action="zoom" .centre-image}
           
 Due to my interest in programming and interest in this problem I decided to bring the two together and created a program that replicates the situation and outputs the statistics of wins and losses with switches and without (where the results can be seen further down).
           

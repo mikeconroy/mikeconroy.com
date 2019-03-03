@@ -97,5 +97,3 @@ Happy Coding!
 * * *
 
 <sup>1</sup> The severity of &#8220;non-compliance&#8221; could be configured to either throw a warning or an error based on which rule had been broken. For example a line length of greater than 100 may throw an error but an extra whitespace somewhere may just cause a warning.
-
-&nbsp;

@@ -38,7 +38,7 @@ Where the 0s are the blanks in the given puzzle. The program will then print the
   
 When input the puzzle above:
 
-![Example Output](/assets/images/sudoku/example.png){:data-action="zoom"}
+![Example Output](/assets/images/sudoku/example.png){:data-action="zoom" .centre-image}
 
 Here is the source code:
 

@@ -3,9 +3,10 @@ id: 80
 title: The Monty Hall Problem (Part 1)
 date: 2013-06-16T13:45:47+00:00
 author: Mike Conroy
-layout: post
+layout: post 
 guid: http://mikepconroy.com/?p=80
 permalink: /2013/06/the-monty-hall-problem-part-1/
+comments: true
 categories:
   - Other
 tags:

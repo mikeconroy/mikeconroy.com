@@ -6,6 +6,7 @@ author: Mike Conroy
 layout: post
 guid: http://mikepconroy.com/?p=176
 permalink: /2014/05/how-to-mass-unfollow-on-twitter/
+comments: true
 categories:
   - Other
   - Technology

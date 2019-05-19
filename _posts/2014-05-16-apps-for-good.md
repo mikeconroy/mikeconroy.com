@@ -6,6 +6,7 @@ author: Mike Conroy
 layout: post
 guid: http://mikepconroy.com/?p=163
 permalink: /2014/05/apps-for-good/
+comments: true
 categories:
   - Computing
   - Event

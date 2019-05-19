@@ -6,6 +6,7 @@ author: Mike Conroy
 layout: post
 guid: http://mikepconroy.com/?p=49
 permalink: /2013/03/java-sudoku-solver/
+comments: true
 categories:
   - Technology
 tags:

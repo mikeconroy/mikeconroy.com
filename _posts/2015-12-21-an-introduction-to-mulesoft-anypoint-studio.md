@@ -6,6 +6,7 @@ author: Mike Conroy
 layout: post
 guid: https://mikepconroy.com/?p=227
 permalink: /2015/12/an-introduction-to-mulesoft-anypoint-studio/
+comments: true
 categories:
   - Computing
   - Technology

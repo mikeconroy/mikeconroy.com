@@ -6,6 +6,7 @@ author: Mike Conroy
 layout: post
 guid: https://mikepconroy.com/?p=270
 permalink: /2017/03/an-introduction-to-checkstyle/
+comments: true
 categories:
   - Computing
   - Technology

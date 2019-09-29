@@ -4,7 +4,7 @@ title: Whose number is it anyway?
 date: 2013-03-21T17:00:32+00:00
 author: Mike Conroy
 layout: post
-guid: http://mikepconroy.com/?p=17
+guid: http://mikeconroy.com/?p=17
 permalink: /2013/03/whose-number-is-it-anyway/
 categories:
   - Other

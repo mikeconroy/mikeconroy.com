@@ -4,7 +4,7 @@ title: Java Sudoku Solver
 date: 2013-03-22T17:12:12+00:00
 author: Mike Conroy
 layout: post
-guid: http://mikepconroy.com/?p=49
+guid: http://mikeconroy.com/?p=49
 permalink: /2013/03/java-sudoku-solver/
 comments: true
 categories:

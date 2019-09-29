@@ -4,7 +4,7 @@ title: An Introduction to Checkstyle
 date: 2017-03-15T20:55:23+00:00
 author: Mike Conroy
 layout: post
-guid: https://mikepconroy.com/?p=270
+guid: https://mikeconroy.com/?p=270
 permalink: /2017/03/an-introduction-to-checkstyle/
 comments: true
 categories:

@@ -4,7 +4,7 @@ title: The Monty Hall Problem (Part 2)
 date: 2013-06-16T15:38:14+00:00
 author: Mike Conroy 
 layout: post 
-guid: http://mikepconroy.com/?p=97
+guid: http://mikeconroy.com/?p=97
 permalink: /2013/06/the-monty-hall-problem-part-2/
 comments: true
 categories:

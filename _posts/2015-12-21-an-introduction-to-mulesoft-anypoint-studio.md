@@ -4,7 +4,7 @@ title: An Introduction to MuleSoft Anypoint Studio
 date: 2015-12-21T12:12:15+00:00
 author: Mike Conroy
 layout: post
-guid: https://mikepconroy.com/?p=227
+guid: https://mikeconroy.com/?p=227
 permalink: /2015/12/an-introduction-to-mulesoft-anypoint-studio/
 comments: true
 categories:

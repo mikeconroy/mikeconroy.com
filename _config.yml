@@ -28,7 +28,7 @@ plugins:
   - jekyll-feed
 
 disqus:
-  shortname: mikeconroy
+  shortname: mikepconroy
 
 google_analytics: UA-39429488-3
 # Exclude from processing.

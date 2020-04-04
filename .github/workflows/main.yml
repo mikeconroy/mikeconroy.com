@@ -19,14 +19,15 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - uses: actions/setup-ruby@v1
-      with:
-        ruby-version: '2.7'
+#    - uses: actions/setup-ruby@v1
+#      with:
+#        ruby-version: '2.7'
 
     # Runs a single command using the runners shell
     - name: Setup Environment.
       run: |
-        gem install jekyll bundler
+        ruby -v
+        #gem install jekyll bundler
         sudo apt-get install -y ncftp
         
     - name: Build Site with Jekyll.

@@ -19,23 +19,20 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-#    - uses: actions/setup-ruby@v1
-#      with:
-#        ruby-version: '2.7'
 
     # Runs a single command using the runners shell
     - name: Setup Environment.
       run: |
-        ruby -v
-        #gem install jekyll bundler
+        gem install jekyll bundler
         sudo apt-get install -y ncftp
         
     - name: Build Site with Jekyll.
-      run: echo Building Site.
+      run: JEKYLL_ENV=production bundle exec jekyll build
     
-    - name: Upload built site to FTP.
+    - name: Upload site to FTP.
       env:
         ftp_location: ${{ secrets.ftp_location }}
         ftp_username: ${{ secrets.ftp_username }}
-      run: echo Uploading to FTP. "$ftp_location"
-      
+        ftp_password: ${{ secrets.ftp_password }} 
+      run: |
+        ncftpput -R -v -u "$ftp_username" -p "ftp_password" $ftp_location /mikeconroy.com _site/*

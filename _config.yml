@@ -31,6 +31,9 @@ disqus:
   shortname: mikepconroy
 
 google_analytics: UA-39429488-3
+
+plugins:	
+  - jekyll-target-blank
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

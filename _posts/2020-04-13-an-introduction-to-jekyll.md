@@ -1,6 +1,5 @@
 ---
 title: An Introduction to Jekyll
-date: 2020-04-13T22:40:00+00:00
 author: Mike Conroy
 layout: post
 permalink: /2020/04/an-introduction-to-jekyll/

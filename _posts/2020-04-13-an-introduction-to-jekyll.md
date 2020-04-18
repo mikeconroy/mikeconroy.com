@@ -19,7 +19,7 @@ Firstly, what is a 'static website'? Essentially it means that the website doesn
 ***
 
 There are 2 main reasons that I have moved the site over to Jekyll one is performance and the other is to learn.
-* **Performance** - A major reason was that the old Wordpress site was beginning to feel bloated and slow. After being used for over 5 years various add-ons & extensions had been added which no doubt had an impact on the site. Sure, I could have spent some time debugging and optmising the Wordpress site to bring it back up to speed but PHP & a framework like Wordpress will always be slower than a static website. Wordpress is likely overkill for my needs.
+* **Performance** - A major reason was that the old Wordpress site was beginning to feel bloated and slow. After being used for over 7 years various add-ons & extensions had been added which no doubt had an impact on the site. Sure, I could have spent some time debugging and optmising the Wordpress site to bring it back up to speed but PHP & a framework like Wordpress will always be slower than a static website. Wordpress is likely overkill for my needs.
 * **Learning** - The second major reason was for my own learning. I wanted to learn and understand a new technology which seems to have gained a lot of traction over the last few years so wanted a better understanding of how it works.
 
 Some other considerations that helped me make this decision are as follows:
@@ -75,6 +75,6 @@ The following are files and folders that are used by Jekyll and what they do. Mo
 * **Gemfile** - Used to manage dependencies of the project. On this site I wanted to ensure that all new links open up in a new tab and used this file to include the [jekyll-target-blank](https://github.com/keithmifsud/jekyll-target-blank) dependency which automatically handles this. It was as simple as adding the line "gem 'jekyll-target-blank'" to the end of the Gemfile and updating the plugins section on '_config.yml'. The commit for this can be found [here](https://github.com/mikecon94/mikeconroy.com/commit/cd839e6ac39168c049b17ffd66581e936babd453).
 * **index.md** - This is the Markdown or HTML file for the home page of the website. The file on this site hasn't been modified from the default and just uses the home layout which displays the posts in order of date. If the site was more than a blog then this could be modified as normal into a 'normal' HTML page which linked to a separate blog page containing a link to the posts.
 
-#### Conclusion
+# Conclusion
 ***
 So far I have been happy with the move and enjoying using a development environment and workflow that I am familiar with. I have also enjoyed playing around with Jekyll and customising small pieces such as date formats and the plugins used. The website itself has seen a significant increase in speed compared to when it ran on Wordpress. Moving over to Jekyll has also enabled me to open source the site & automate deployments which will be covered in a future post.

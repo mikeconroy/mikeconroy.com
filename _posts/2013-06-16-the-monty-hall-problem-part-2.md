@@ -16,7 +16,7 @@ tags:
   - programming
   - statistics
 ---
-If you are unfamiliar with The Monty Hall Problem please read the first part of this blog post [here.]({{ site.baseurl }}{% link _posts/2013-06-16-the-monty-hall-problem-part-1.md %})
+If you are unfamiliar with The Monty Hall Problem please read the first part of this blog post [here.]({% link _posts/2013-06-16-the-monty-hall-problem-part-1.md %})
 
 ![Overview](/assets/images/MontyHall/overview.png){:data-action="zoom" .centre-image}
           

@@ -5,3 +5,4 @@ Gemfile.lock
 buildupload
 .bundle/
 /vendor
+.jekyll-cache/

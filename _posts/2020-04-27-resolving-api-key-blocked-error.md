@@ -2,7 +2,7 @@
 title: Resolving the "APIKey is Blocked" error in Mule
 author: Mike Conroy
 layout: post
-permalink: /2020/04/resolving-api-key-blocked-error
+permalink: /2020/04/resolving-api-key-blocked-error/
 comments: true
 categories:
   - Computing

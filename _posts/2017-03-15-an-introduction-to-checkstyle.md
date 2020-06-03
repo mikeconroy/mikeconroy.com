@@ -20,25 +20,17 @@ tags:
   
 Checkstyle is a tool that can be used by developers in order to help teams follow coding conventions on a Java project. I recently used this whilst developing a <a href="https://github.com/mikecon94/Battleships" target="_blank">Battleships</a> game in Java with a group of others as part of a university module (maybe a post for another day?..).
 
-<p style="text-align: center;">
-  <strong>Why use Checkstyle?</strong>
-</p>
-
-* * *
+# Why use Checkstyle?
 
 Coding conventions and standards are a way to ensure that code is formatted consistently across a project, team or organisation. The benefits of using them are pretty well known and well documented but it essentially comes down to making the code more readable and accessible to yourself and other developers.
 
 Checkstyle helps developers to follow a coding convention by pointing out errors or warnings within the IDE based on an XML configuration file that you provide in the project. The configuration file&#8217;s format is <a href="http://checkstyle.sourceforge.net/config_coding.html" target="_blank">well documented</a>, easy to read and easy to edit. On our project we chose to base our standards on Google&#8217;s guidelines (<a href="https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml" target="_blank">google_checks.xml</a>) which we then adapted to suit our own coding style (<a href="https://github.com/mikecon94/Battleships/blob/master/checkstyle.xml" target="_blank">checkstyle.xml</a>). We also used <a href="https://travis-ci.org/" target="_blank">Travis CI</a> to build our project each time someone pushed new code and if compilation and tests passed then we would get a notification in our team&#8217;s Slack channel, similarly if anything went wrong we would get a notification to let us know we needed to fix something. As we were using Checkstyle with the Maven plugin this meant that if code was committed which didn&#8217;t comply with our standards then the build would fail<sup>1</sup>.
 
-<p style="text-align: center;">
-  <strong>How to install & use Checkstyle</strong>
-</p>
-
-* * *
+# How to install & use Checkstyle
 
 Installing and getting Checkstyle to work with Maven initially took a few attempts and gave quite the headache but I put that down to my lack of experience with Maven and in the end it was worth it. I&#8217;m hoping that by documenting the process here others will be able to save time by not having to follow my process of trial and error!
 
-**Maven**
+#### Maven
 
 In the pom.xml put the following block of code into the <plugins> section.
 
@@ -87,7 +79,7 @@ Below that line you will see a list of errors or warnings if your code does not 
 
 That&#8217;s it, your project is now set up to run Checkstyle with Maven!
 
-**Eclipse**
+#### Eclipse
 
 There is also an [Eclipse Checkstyle Plugin](http://eclipse-cs.sourceforge.net) available for Checkstyle which will allow Eclipse to display errors and warnings to the user in the &#8216;problems&#8217; tab. This makes it easy for developers to see jump to the offending pieces of code and fix it to comply with the coding standards in the configuration file.<figure id="attachment_297" style="width: 625px" class="wp-caption aligncenter">
 

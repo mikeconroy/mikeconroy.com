@@ -19,7 +19,7 @@ tags:
 ---
 I have just uploaded a program I wrote a couple of weeks ago to <a title="GitHub" href="https://github.com/mikecon94/JavaSudokuSolver#readme" target="_blank">GitHub</a>. The program is a sudoku solver which I wrote in Java. I am also posting the source code below.
 
-**Usage**
+# Usage
   
 The program reads the sudoku from a text file called &#8220;Sudoku.txt&#8221;. Which should be formatted like so:
 

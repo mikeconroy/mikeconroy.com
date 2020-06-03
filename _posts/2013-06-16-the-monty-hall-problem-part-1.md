@@ -20,7 +20,7 @@ This part of the post is about explaining the problem itself and why the answer 
 
 Since reading about the problem in a <a title="book" href="http://en.wikipedia.org/wiki/The_Curious_Incident_of_the_Dog_in_the_Night-Time" target="_blank">book</a> when I was young, the monty hall problem, has always been something I have found interesting, and found myself on the <a title="Wikipedia page" href="http://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank">Wikipedia page</a> for it multiple times (including when it was used in one of Derren Browns shows, and in the movie <a title="21" href="http://en.wikipedia.org/wiki/21_(2008_film)" target="_blank">21</a>). So I decided to write a program that demonstrates it and write a blog post about it.
 
-**The &#8220;Problem&#8221;**
+# The Problem
 
 Imagine you are on a game show and the host shows you 3 closed doors and asks you to pick one &#8211; either 1, 2 or 3. You are told that behind 2 of the doors there is a goat, but behind one of the doors is a grand prize of a car. After you have made your choice, let&#8217;s say you choose door number 1, the host (knowing which doors contain the goats) will then open one of the doors you haven&#8217;t picked to reveal a goat. For this example let&#8217;s say he shows you door number 2. After, showing you the goat behind this door, you are then given the option to swap your choice to the remaining door if you wish.
 
@@ -30,13 +30,13 @@ Or worded differently:
   
 What are the chances of the car being behind door number 1, and the chances of it being behind door number 3?
 
-**The Solution**
+# The Solution
 
 It seems like the answer is obvious &#8211; there is a 50% chance of winning whether you stick with your choice or if you switch, and therefore switching has no benefit. This answer is actually incorrect, despite it seeming so simple and clear.
 
 The fact is you actually have 1 in 3 (33.33%) of chance of winning if you stick with your initial answer BUT if you decide to switch your chances of winning increase to 2/3 (66.66%).
 
-**Explanation**
+# Explanation
 
 The main reason the chance of winning changes from 1/3 to 2/3 is because the host has to choose one of the losing doors.
   

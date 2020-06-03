@@ -11,20 +11,11 @@ categories:
   - Computing
   - Technology
 ---
-<p style="text-align: center;">
-  <strong>What is Anypoint Studio?</strong>
-</p>
-
-* * *
+# What is Anypoint Studio?
 
 Anypoint studio is a tool for building integrations & APIs for systems. It is based on <a href="https://eclipse.org/home/index.php" target="_blank">eclipse</a> (the popular open source Java IDE) so provides a familiar environment for many. It is a graphical tool which has a low learning curve and makes it easy to build integrations. Connectors, as the name suggests, are the part in a &#8220;flow&#8221; which actually connects to a system and extract or import data. There are many built-in connectors such as Salesforce, databases, ftp and even Facebook & Twitter. It is also possible to download more that have been built by the community from the <a href="https://www.mulesoft.com/exchange?_bm=b&_bt=39007376812&utm_campaign=G_Brands_EMEA_Search_Shohil_Mule_Connectors&utm_medium=cpc&utm_source=google&utm_term=%252Bmulesoft%2520%252Bconnectors#!/?types=connector&sortBy=name" target="_blank">Anypoint Exchange</a> or develop your own if what you need isn&#8217;t available. The following guide shows just how quick and easy it is to create a MuleSoft application which grabs data from a system and transforms it before sending it to a different system.
 
-<p style="text-align: center;">
-  <strong>Creating a basic app &#8211; Salesforce to HTTP</strong>
-</p>
-
-* * *
-&nbsp;
+# Creating a basic app - A Salesforce REST API
 {% include image.html url="/assets/images/MuleSoft/screenshot.png" description="MuleSoft Anypoint Studio - Salesforce Flow" %}
 
 The flow that we will create will return data from Salesforce (Accounts in our example) to the browser in JSON when visiting http://localhost:8081/salesforce.demo
@@ -37,3 +28,7 @@ The flow that we will create will return data from Salesforce (Accounts in our e
   6. In the logger configuration simply enter #[&#8216;Sending to browser&#8217;] in the Message field.
 
 Finally run the application by right-clicking the project in the left hand side browser -> Run-As -> Mule Application. When you see the word DEPLOYED in your console that means your application should now be running and if you visit http://localhost:8081/salesforcedemo you should retrieve a JSON view of all the accounts in your Salesforce environment.
+
+* * *
+
+**Update - 2020** This post was done in 2015 and is now very outdated as it was done on a much older version. Perhaps there will be a new post in the future to reflect the latest Mule version.

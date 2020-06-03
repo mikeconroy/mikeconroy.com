@@ -22,7 +22,7 @@ If you are unfamiliar with The Monty Hall Problem please read the first part of 
           
 Due to my interest in programming and interest in this problem I decided to bring the two together and created a program that replicates the situation and outputs the statistics of wins and losses with switches and without (where the results can be seen further down).
           
-**Computing the Problem**
+# Computing the Problem
           
 I have uploaded the source code to the program which can be found <a href="https://github.com/mikecon94/TheMontyHallProblem/blob/master/MontyHallProblem.java" target="_blank">here.</a>
           
@@ -30,7 +30,7 @@ The program works by creating 3 doors at the start of each game and randomly cho
           
 To make it easier to quickly run the program multiple times I created short java program to produce a file that can then be fed into the standard input of the main file to run the game 1000&#8217;s of time quickly and view the results. That program can be found <a href="https://github.com/mikecon94/TheMontyHallProblem/blob/master/PrintFile.java" target="_blank">here.</a>
           
-**The Results**
+# The Results
           
 I ran the program multiple times using the file printing program to give me a different number of inputs each time from 20 games to 20,000 here you can see the screenshots of the results below.
 

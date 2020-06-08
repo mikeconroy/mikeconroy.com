@@ -43,9 +43,11 @@ For Windows I opted to use the 'Windows Subsystem for Linux' so I could use a Li
 
 Building & Running the site locally -
 {% highlight bash %}
-bundle exec  jekyll serve --drafts
+bundle exec  jekyll serve --drafts --livereload
 {% endhighlight %}
 The *drafts* flag is optional but will display the site as if the posts in the _drafts folder have been published. This is useful for previewing how your drafts posts will be displayed in the browser without publishing them.
+
+The *livereload* flag is optional but will update your browser as soon as any changes are saved which makes it very quick to preview changes as you make them.
 
 Building the site -
 {% highlight bash %}

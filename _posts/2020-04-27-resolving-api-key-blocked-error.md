@@ -43,12 +43,14 @@ The issue occurs as the embedded Mule runtime (in Anypoint Studio) is not authen
 
 # The Resolution
 
+### Anypoint Studio
+
 To resolve this in Anypoint Studio go to Window -> Preferences -> Anypoint Studio -> API Manager.
 
 You will see two fields that you need to populate; Client ID & Client Secret.
 {% include image.html url="/assets/images/MuleSoft/env-credentials-anypoint-studio.png" description="Environment Credentials - Studio Configuration" %}
 
-These fields need to be populated with either Organisation Credentials or Environment Credentials.
+These fields need to be populated with either Organisation Credentials or Business Group Credentials.
 
 These can be obtained by going to [Anypoint Platform](https://anypoint.mulesoft.com) -> Management Center -> Access Management -> Organization.
 
@@ -64,3 +66,14 @@ Click Validate and ensure the green tick appears confirming the credentials are 
 Re-run the Mule App and the error should no longer appear and you will be able to call the API and get a response.
 
 {% include image.html url="/assets/images/MuleSoft/valid-success.png" description="Validation Succesful" %}
+
+### CloudHub & Runtime Manager
+
+Apps deployed to CloudHub or on-premise will also need the above Client ID & Secret set as properties.
+The properties to set are:
+
+- *anypoint.platform.client_id*
+- *anypoint.platform.client_secret*
+
+
+Hope this helps, more information on this can be found [here](https://docs.mulesoft.com/api-manager/2.x/org-credentials-config-mule4).

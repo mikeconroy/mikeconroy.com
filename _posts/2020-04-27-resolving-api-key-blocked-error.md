@@ -43,7 +43,7 @@ The issue occurs as the embedded Mule runtime (in Anypoint Studio) is not authen
 
 # The Resolution
 
-### Anypoint Studio
+#### Anypoint Studio
 
 To resolve this in Anypoint Studio go to Window -> Preferences -> Anypoint Studio -> API Manager.
 
@@ -67,7 +67,7 @@ Re-run the Mule App and the error should no longer appear and you will be able t
 
 {% include image.html url="/assets/images/MuleSoft/valid-success.png" description="Validation Succesful" %}
 
-### CloudHub & Runtime Manager
+#### CloudHub & Runtime Manager
 
 Apps deployed to CloudHub or on-premise will also need the above Client ID & Secret set as properties.
 The properties to set are:

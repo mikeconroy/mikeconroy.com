@@ -1,8 +1,8 @@
 ---
-title: Mule & ELK Part 2 - Sending Mule Logs to ELK with Log4j2
+title: Mule & ELK Part 2 - Sending Mule Logs to ELK with Log4j2 (CloudHub & On-Premise)
 author: Mike Conroy
 layout: post
-permalink: /2020/06/sending-mule-logs-to-elk-with-log4j2/
+permalink: /2020/07/sending-mule-logs-to-elk-with-log4j2/
 comments: true
 categories:
   - Computing

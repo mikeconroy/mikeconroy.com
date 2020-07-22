@@ -16,69 +16,97 @@ categories:
   [![ELK Logo](/assets/images/elk/logo.png)](https://www.elastic.co/what-is/elk-stack)
 </div>
 
-# How to send Mule Logs to ELK with Log4j2?
+[Part 1]({% link _posts/2020-06-08-an-introduction-to-elk-stack-with-mule.md %}) of this series explained what ELK is and a high level view of the options. This post will explain how to send Mule logs to ELK using Log4j2 appenders and a socket in Logstash which will work for both CloudHub and on-premise runtimes.
 
-There are a few options for sending logs from Mule applications to the ELK stack and the runtime model used can dictate available options. For example, if your Mule applications run in on-premise or "customer hosted" Mule runtimes File Beat could be used instead to monitor the 'actual' log files that Mule writes and send them to Logstash. Since FileBeat is an executable in it's own right it is not possible to install this on a CloudHub worker so this isn't an option.
+#### Disabling Logs in CloudHub
 
-This post focuses on configuring Log4j2 to send the logs to the ELK stack which will work in CloudHub and Customer-Hosted runtimes.
+In order to use this method, the default logs must be disabled in CloudHub. This is because CloudHub uses its own Log4j configuration which overwrites/ignores the one bundled with the app. This means for our Log4j configuration to work CloudHub's must be disabled.
+
+The setting can be found in the Settings of the deployed application:
+{% include image.html url="/assets/images/elk/disableCloudHubLogs.png" description="Disable CloudHub Logs" %}
+
+Note that although the default Logs will be disabled an Appender will be included in the custom Log4j configuration that will send the logs to CloudHub so they can still be viewed in Runtime Manager as normal.
 
 #### Log4j2 Configuration
 
+Configuring Log4j2 consists of adding an appender that sends the logs to a TCP socket and an additional appender for sending the logs to CloudHub (if desired).
+
 The complete Log4j2 configuration can be found [here](/assets/elk/log4j2.xml).
-The Appender
+
+The Appender to send logs to Logstash (edit host & port to match the Logstash deployment):
 {% highlight xml %}
 <Socket name="socket" host="localhost" port="4560" protocol="TCP">
     <JsonLayout compact="true" eventEol="true" />
-    <!-- <PatternLayout pattern="{&quot;log_timestamp&quot;:&quot;%d&quot; ,&quot;log_thread&quot;:&quot;[%t]&quot; , &quot;log_level&quot;:&quot;%-5p&quot; , %m}%n" /> -->
 </Socket>
 {% endhighlight %}
 
-And the Appender Ref
+The Appender to send logs to CloudHub:
+{% highlight xml %}
+<Log4J2CloudhubLogAppender name="CLOUDHUB"
+    addressProvider="com.mulesoft.ch.logging.DefaultAggregatorAddressProvider"
+    applicationContext="com.mulesoft.ch.logging.DefaultApplicationContext"
+    appendRetryIntervalMs="${sys:logging.appendRetryInterval}"
+    appendMaxAttempts="${sys:logging.appendMaxAttempts}"
+    batchSendIntervalMs="${sys:logging.batchSendInterval}"
+    batchMaxRecords="${sys:logging.batchMaxRecords}"
+    memBufferMaxSize="${sys:logging.memBufferMaxSize}"
+    journalMaxWriteBatchSize="${sys:logging.journalMaxBatchSize}"
+    journalMaxFileSize="${sys:logging.journalMaxFileSize}"
+    clientMaxPacketSize="${sys:logging.clientMaxPacketSize}"
+    clientConnectTimeoutMs="${sys:logging.clientConnectTimeout}"
+    clientSocketTimeoutMs="${sys:logging.clientSocketTimeout}"
+    serverAddressPollIntervalMs="${sys:logging.serverAddressPollInterval}"
+    serverHeartbeatSendIntervalMs="${sys:logging.serverHeartbeatSendIntervalMs}"
+    statisticsPrintIntervalMs="${sys:logging.statisticsPrintIntervalMs}">
+{% endhighlight %}
+
+And the Appender Refs at the bottom of the file:
 {% highlight xml %}
 <AsyncRoot level="INFO">
     <AppenderRef ref="file" />
-    <AppenderRef ref="socket" />
+    <AppenderRef ref="CLOUDHUB" />
 </AsyncRoot>
 {% endhighlight %}
 
 #### Logstash Configuration
 
+Logstash configurations consist of 3 parts; input, filters & output (similar to an ETL tool or even integration).
+
 The complete Logstash configuration can be found [here](/assets/elk/logstash-mule.conf).
-Logstash uses Socket for the input as you can see from the log4j2 configuration.
-  Listens to TCP on port xxx.
-  Uses a filter to identify the date
-  then sends the logs onto the elastic search cluster and index as defined.
 
+The Input is where we tell Logstash where to expect messages from. We use a TCP socket (as mentioned in the log4j configuration) for our use case. This will make logstash listen on the port provided and accept new log messages sent through.
+{% highlight java %}
+input {
+  tcp {
+    port => 4560
+    codec => json
+  }
+}
+{% endhighlight %}
 
-#### Elasticsearch & Kibana
+The next step is the Filter stage is where we can perform transformations and massage the data as needed. In this example we are take the timeMillis field in the logs and recognise it as a date field in Unix time in milliseconds since epoch.
+{% highlight java %}
+filter {
+  date {
+    match => [ "timeMillis", "UNIX_MS" ]
+  }
+}
+{% endhighlight %}
 
-Very little configuration required...
+Lastly, we have the Output phase which sends the data onto the Elasticsearch cluster and index as defined. The host should be configured to match the elasticsearch instance details (username & password can be configured as well).
+{% highlight java %}
+output {
+  elasticsearch {
+    hosts => ["http://localhost:9200"]
+    index => "mule-logs"
+  }
+}
+{% endhighlight %}
 
+#### Conclusion
 
-Future posts will look further into parsing the log messages and visualising them as well as how File Beats could be used instead.
+Once the application is deployed you should then be able to see the logs appearing in Kibana.
 
+{% include image.html url="/assets/images/elk/kibana.png" description="Mule logs in Kibana" %}
 
-Turn into a series of posts? https://engineering.chrobinson.com/how-to/linking-a-series-of-jekyll-posts/
-  Add that this is an ongoing series of posts touching different parts of the topic and the post will continuously be update - feedback is welcome.
-  Part 1 - Introduction to ELK & MuleSoft - Why it's used?
-  Part 2 - Sending Logs to ELK with Log4j2
-    Confirm this works from CloudHub (may be difficult without Logstash being publicly accessible) and disabling CloudHub Logs?? CloudHub appender?
-    Log Levels - Do debug logs go through? Errors?
-  Part 3 - Sending Logs to ELK with Beats
-  Part 4 - Parsing the logs to load cleanly into Elasticsearch
-    Index configuration on Elastic Search (should multiple apps go across multiple indexes or a single one).
-    Review log4j2 layout - is json layout correct? JSON Parse Error?
-    Parsing the elements of the message.
-    Correlation ID? Metrics?
-  Part 5 - Creating useful dashboards in Kibana to visualise your API.
-
-Add a note that Operations can refer to the team responsible for the API which could/will include developers in a DevOps environment.
-
-Other blog posts
-  Configuration of Kibana
-    Dashboards that could be created??
-
-  logstash -f config/logstash-mule.conf
-  ./kibana
-  ./mule start
-  ./elasticsearch start
+Future posts will look further into parsing the log messages and visualising them as well as how Filebeats could be used instead of Log4j.

@@ -44,9 +44,20 @@ In summary, the benefits of sending the logs to a log aggregation tool are as fo
 * Control over storage and how long logs are kept for - which may be a regulation or auditing requirement in some cases.
 * Security - Identify trends and malicious requests - e.g. authentication failures, DOS attempts from a set of IPs.
 
-# Options for sending logs to ELK from a Mule Runtime
-There are a couple if options for sending Mule logs to the ELK stack and the decision on which method will likely come down to infrastructure setup.
-* [Log4j2](https://logging.apache.org/log4j/2.x/) - The configuration of the Mule applications can be updated to send logs to Logstash via a socket. This option can be used either in CloudHub or in an on-premise setup. Part 2 of this series will walkthrough the configuration required for this method.
-* [Filebeat](https://www.elastic.co/beats/filebeat) - This option is for an on-premise setup (cannot be used with CloudHub) and consists of running the Filebeat agent on the Mule Runtime servers which will then monitor log files and send updates through to Logstash. Part 3 of this series will walkthrough the configuration required for this method.
+# How to send Mule Logs to ELK?
+There are a couple of options for sending Mule logs to the ELK stack and the decision on which method will likely come down to infrastructure setup.
+* [Log4j2](https://logging.apache.org/log4j/2.x/) - The configuration of the Mule applications can be updated to send logs to Logstash via a socket. [Part 2]({% link _drafts/2020-07-16-sending-mule-logs-to-elk-with-log4j2.md %}) of this series will walkthrough the configuration required for this method.
+  * **Pros:** Works on both CloudHub & customer hosted (on-premise) runtimes as it's the apps responsibility to ship the logs.
+  * **Cons:** Not officially supported by MuleSoft and requires editing of the Log4j2.xml file in *all* Mule apps that need to send the logs.
+
+* [Filebeat](https://www.elastic.co/beats/filebeat) - This option consists of running the Filebeat agent on the Mule Runtime servers where it will monitor log files and send updates through to Logstash. Part 3 of this series will walkthrough the configuration required for this method.
+  * **Pros:** Doesn't require editing of all the Mule apps (infrastructure or DevOps team can take responsibility for shipping logs). If Filebeat fails to send some logs the log files will still be available on the server's disk. 
+  * **Cons:** Can only be used on customer hosted runtimes and *not* CloudHub (due to not being able to install the agent on the server).
+
+* [CloudHub REST API](https://docs.mulesoft.com/runtime-manager/cloudhub-api) - This option requires a custom application to be buit that will call the CloudHub REST API to retrieve logs and then forward them onto ELK.
+  * **Pros:** Doesn't require disabling of CloudHub logs & easier to handle errors than Log4j2 configuration (if app detects a failure it can try to call the API again/raise an alert etc.).
+  * **Cons:** Custom development and additional application to maintain that is calling the CloudHub API. Only possible with CloudHub. Logs not sent through in real-time.
+
+In general, Log4j2 is the approach taken when CloudHub is used and Filebeat when on premise. These two options require the least customisation & development.
 
 This post and series are on-going and will be continuously updated. I would love to hear your thoughts & comments below!

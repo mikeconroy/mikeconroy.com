@@ -46,7 +46,7 @@ In summary, the benefits of sending the logs to a log aggregation tool are as fo
 
 # How to send Mule Logs to ELK?
 There are a couple of options for sending Mule logs to the ELK stack and the decision on which method will likely come down to infrastructure setup.
-* [Log4j2](https://logging.apache.org/log4j/2.x/) - The configuration of the Mule applications can be updated to send logs to Logstash via a socket. [Part 2]({% link _drafts/2020-07-16-sending-mule-logs-to-elk-with-log4j2.md %}) of this series will walkthrough the configuration required for this method.
+* [Log4j2](https://logging.apache.org/log4j/2.x/) - The configuration of the Mule applications can be updated to send logs to Logstash via a socket. [Part 2]({% link _posts/2020-07-22-sending-mule-logs-to-elk-with-log4j2.md %}) of this series will walkthrough the configuration required for this method.
   * **Pros:** Works on both CloudHub & customer hosted (on-premise) runtimes as it's the apps responsibility to ship the logs.
   * **Cons:** Not officially supported by MuleSoft and requires editing of the Log4j2.xml file in *all* Mule apps that need to send the logs.
 
@@ -61,3 +61,5 @@ There are a couple of options for sending Mule logs to the ELK stack and the dec
 In general, Log4j2 is the approach taken when CloudHub is used and Filebeat when on premise. These two options require the least customisation & development.
 
 This post and series are on-going and will be continuously updated. I would love to hear your thoughts & comments below!
+
+### [Part 2 - Sending Logs via Log4j2]({% link _posts/2020-07-22-sending-mule-logs-to-elk-with-log4j2.md %})

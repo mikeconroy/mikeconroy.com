@@ -74,7 +74,7 @@ And the Appender Refs at the bottom of the file:
 
 Logstash configurations consist of 3 parts; input, filters & output (similar to an ETL tool or even integration).
 
-The complete Logstash configuration can be found [here](/assets/elk/logstash-mule.conf).
+The complete Logstash configuration can be found [here](/assets/elk/logstash-mule.conf.txt).
 
 The Input is where we tell Logstash where to expect messages from. We use a TCP socket (as mentioned in the log4j configuration) for our use case. This will make logstash listen on the port provided and accept new log messages sent through.
 {% highlight java %}

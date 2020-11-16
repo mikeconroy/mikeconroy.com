@@ -16,7 +16,9 @@ categories:
   [![ELK Logo](/assets/images/elk/logo.png)](https://www.elastic.co/what-is/elk-stack)
 </div>
 
-[Part 1]({% link _posts/2020-06-08-an-introduction-to-elk-stack-with-mule.md %}) of this series explained what ELK is and a high level view of the options. This post will explain how to send Mule logs to ELK using Log4j2 appenders and a socket in Logstash which will work for both CloudHub and on-premise runtimes.
+[Part 1 - Introduction to ELK Stack with Mule]({% link _posts/2020-06-08-an-introduction-to-elk-stack-with-mule.md %}) of this series explained what ELK is and a high level view of the options. This post will explain how to send Mule logs to ELK using Log4j2 appenders and a socket in Logstash which will work for both CloudHub and on-premise runtimes.
+
+This post will look at how we send the logs to ELK from CloudHub using Log4j2.
 
 #### Disabling Logs in CloudHub
 
@@ -109,4 +111,5 @@ Once the application is deployed you should then be able to see the logs appeari
 
 {% include image.html url="/assets/images/elk/kibana.png" description="Mule logs in Kibana" %}
 
-Future posts will look further into parsing the log messages and visualising them as well as how Filebeats could be used instead of Log4j.
+Future posts will look further into parsing the log messages and visualising them as well as how Filebeat ([Part 3]({% link _posts/2020-11-16-sending-mule-logs-to-elk-with-filebeat.md %})) could be used instead of Log4j.
+

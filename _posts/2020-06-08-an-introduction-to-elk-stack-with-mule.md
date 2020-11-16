@@ -63,3 +63,4 @@ In general, Log4j2 is the approach taken when CloudHub is used and Filebeat when
 This post and series are on-going and will be continuously updated. I would love to hear your thoughts & comments below!
 
 ### [Part 2 - Sending Logs via Log4j2]({% link _posts/2020-07-22-sending-mule-logs-to-elk-with-log4j2.md %})
+### [Part 3 - Sending Logs via Filebeat]({% link _posts/2020-11-16-sending-mule-logs-to-elk-with-filebeat.md %})

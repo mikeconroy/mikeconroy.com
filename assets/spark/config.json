@@ -1,0 +1,66 @@
+{
+    "nodes": [ 
+        { 
+          "id": "salesforce-system-api",
+          "name": "Salesforce System API",
+          "layer": "system"
+        },
+        { 
+          "id": "oracle-system-api",
+          "name": "Oracle System API",
+          "layer": "system"
+        },
+        {
+            "id": "order-management-system-api",
+            "name": "Order Management System API",
+            "layer": "system"
+        },
+        { 
+            "id": "employees-process-api",
+            "name": "Employees Process API",
+            "layer": "process"
+        },
+        { 
+            "id": "orders-process-api",
+            "name": "Orders Process API",
+            "layer": "process"
+        },
+        { 
+            "id": "omnichannel-experience-api",
+            "name": "Mobile Experience API",
+            "layer": "experience"
+        }
+    ],
+    "links": [
+        {
+            "source": "omnichannel-experience-api",
+            "target": "employees-process-api",
+            "value": 5
+        },
+        {
+            "source": "omnichannel-experience-api",
+            "target": "orders-process-api",
+            "value": 5
+        },
+        {
+            "source": "employees-process-api",
+            "target": "salesforce-system-api",
+            "value": 5
+        },
+        {
+            "source": "employees-process-api",
+            "target": "oracle-system-api",
+            "value": 5
+        },
+        {
+            "source": "orders-process-api",
+            "target": "order-management-system-api",
+            "value": 5
+        },
+        {
+            "source": "orders-process-api",
+            "target": "salesforce-system-api",
+            "value": 5
+        }
+    ]
+}

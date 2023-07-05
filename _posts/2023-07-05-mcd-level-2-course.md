@@ -1,7 +1,8 @@
 ---
-title: MCD Level 2 Course Update
+title: MCD Level 2 Course
 author: Mike Conroy
 layout: post
+date: 2023-07-05T18:00:00+00:00
 permalink: /2023/07/mcd-level-2-course/
 comments: true
 categories:

@@ -11,11 +11,11 @@ categories:
   - Certifications
 ---
 
-[![MCD Level 2 Course](/assets/images/McdLevel2/mcdlevel2cover.jpg){: .centre-image}](https://www.udemy.com/course/mulesoft-certified-developer-level-2-practice-exam-walkthrough/?referralCode=11C87A2CD3A9647851EA)
+[![MCD Level 2 Course](/assets/images/McdLevel2/mcdlevel2cover.png){: .centre-image}](https://www.udemy.com/course/mulesoft-certified-developer-level-2-practice-exam-walkthrough/?referralCode=11C87A2CD3A9647851EA)
 
 I have created a course walking through all of the [practice exam questions](https://training.mulesoft.com/certification/developer-mule4-level2/practice-exam) for the MuleSoft Certified Developer Level 2 Certification.
 
-You can access the course on Udemy [here](https://www.udemy.com/course/mulesoft-certified-developer-level-2-practice-exam-walkthrough/?referralCode=11C87A2CD3A9647851EA).
+**You can access the course on Udemy [here](https://www.udemy.com/course/mulesoft-certified-developer-level-2-practice-exam-walkthrough/?referralCode=11C87A2CD3A9647851EA).**
 
 The couse provides additional context to all 60 questions including references to the documentation as well as demonstrations in Anypoint Studio & the Anypoint Platform in order to give a complete understanding of the components discussed. The course covers explanations of both correct answers and details of incorrect answers such as how they may be relevant in similar scenarios and where they are trying to catch you out.
 

@@ -30,7 +30,7 @@ plugins:
 disqus:
   shortname: mikepconroy
 
-google_analytics: UA-39429488-3
+google_analytics: G-SRVS1FPZD4
 
 plugins:	
   - jekyll-target-blank

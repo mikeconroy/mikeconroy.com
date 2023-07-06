@@ -1,5 +1,5 @@
 ---
-title: MCD Level 2 Course
+title: MuleSoft Certified Developer (MCD) Level 2 Course
 author: Mike Conroy
 layout: post
 date: 2023-07-05T18:00:00+00:00
